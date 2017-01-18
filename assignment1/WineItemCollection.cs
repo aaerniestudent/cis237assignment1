@@ -11,7 +11,7 @@ namespace assignment1
 
         private WineItem[] wineItems;
 
-        public static void Add(WineItem addedItem)
+        public void Add(WineItem addedItem)
         {
 
         }

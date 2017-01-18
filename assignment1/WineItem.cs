@@ -12,14 +12,14 @@ namespace assignment1
         private String descriptionString;
         private String packString;
 
-        public void Constructor()
+        public WineItem()
         {
             idString = "00000";
             descriptionString = "Default";
             packString = "0 ml";
         }
 
-        public void Constructor(String id, String description, String pack)
+        public WineItem(String id, String description, String pack)
         {
             idString = id;
             descriptionString = description;
