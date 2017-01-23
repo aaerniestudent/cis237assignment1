@@ -12,6 +12,12 @@ namespace assignment1
         private String descriptionString;
         private String packString;
 
+        public String IdString
+        {
+            get { return idString; }
+            set { idString = value; }
+        }
+
         public WineItem()
         {
             idString = "00000";
@@ -26,7 +32,7 @@ namespace assignment1
             packString = pack;
         }
 
-        public String toString()
+        public String ToString()
         {
             return idString + "," + descriptionString + "," + packString;
         }

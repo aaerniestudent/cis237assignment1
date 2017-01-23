@@ -9,7 +9,7 @@ namespace assignment1
     class Program
     {
 
-        public WineItemCollection collection = new WineItemCollection();
+        public static WineItemCollection collection = new WineItemCollection();
         public static UserInterface UI = new UserInterface();
         public static CSVProcessor processor = new CSVProcessor();
         public static Boolean loaded = false;
@@ -21,6 +21,7 @@ namespace assignment1
             while (choice != 5)
             {
                 choice = UI.MenuInput();
+                UI.Clear();
                 switch (choice)
                 {
                     case 1:
@@ -32,22 +33,25 @@ namespace assignment1
                         }
                     case 2:
                         {
-                            //print entire list
-
+                            //print entire list                           
+                            string s = collection.GetPrintString();
+                            UI.Output(s);
                             UI.Menu();
                             break;
                         }
                     case 3:
                         {
                             //add item
-
+                            WineItem addItem = UI.AddItem();
+                            collection.Add(addItem);
+                            UI.Output("Item added");
                             UI.Menu();
                             break;
                         }
                     case 4:
                         {
                             //search by id
-
+                            UI.Output(collection.SearchByID(UI.searchById()));
                             UI.Menu();
                             break;
                         }

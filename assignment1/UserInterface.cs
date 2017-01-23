@@ -19,29 +19,19 @@ namespace assignment1
 
         public int MenuInput()
         {
-            int i = 0;
-            Boolean valid = false;
-            while (!valid)
+            string input = Console.ReadLine();  
+            while (input != "1" && input != "2" 
+                && input != "3" && input != "4"
+                && input != "5")
             {
-                try
-                {
-                    i = int.Parse(Console.ReadLine());
-                    if (i >= 1 && i <= 5)
-                    {
-                        valid = true;
-                    } else
-                    {
-                        Console.WriteLine("Please input a valid number");
-                    }
-                } catch
-                {
-                    Console.WriteLine("Please input a valid whole number");
-                }
+                InputError();
+                input = Console.ReadLine();
             }
-            return i;
+            return int.Parse(input);
         }
 
-        public void AddItem()
+        //Recieves input for a new wine item and returns it as a single wine item
+        public WineItem AddItem()
         {
             Console.WriteLine("Input ID number");
             String id = Console.ReadLine();
@@ -49,8 +39,29 @@ namespace assignment1
             String description = Console.ReadLine();
             Console.WriteLine("Input pack size");
             String pack = Console.ReadLine();
-            WineItem newItem = new WineItem(id, description, pack);
-            WineItemCollection.Add(newItem);
+            return new WineItem(id, description, pack);            
         }
+
+        public string searchById()
+        {
+            Console.WriteLine("Please input 5 character ID number.");            
+            return Console.ReadLine();
+        }
+
+        public void Output(string s)
+        {
+            Console.WriteLine(s);
+        }
+
+        public void Clear()
+        {
+            Console.Clear();
+        }
+
+        private void InputError()
+        {
+            Console.WriteLine("Error: invalid input; please input the number associated with the menu choice you want.");
+        }
+
     }
 }
