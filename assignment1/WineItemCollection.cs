@@ -18,6 +18,16 @@ namespace assignment1
             set { length = value; }
         }
 
+        public WineItem getWineItem(int index)
+        {
+            return wineItems[index];
+        }
+
+        public WineItem getLastWineItem()
+        {
+            return wineItems[length - 1];
+        }
+
         public void Add(WineItem addedItem)
         {
             wineItems[length] = addedItem;

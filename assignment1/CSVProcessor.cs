@@ -47,7 +47,8 @@ namespace assignment1
             string id = parts[0];
             string description = parts[1];
             string pack = parts[2];
-            collection.Add(new WineItem(id, description, pack), index);
+            WineItem item = new WineItem(id, description, pack);
+            collection.Add(item, index);
             return true;
         }
 

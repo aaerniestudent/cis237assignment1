@@ -20,7 +20,7 @@ namespace assignment1
         {
             UI.Menu();
             while (choice != 5)
-            {
+            {                
                 choice = UI.MenuInput();
                 UI.Clear();
                 switch (choice)
@@ -42,7 +42,7 @@ namespace assignment1
                         {
                             //print entire list                           
                             string s = collection.GetPrintString();
-                            UI.Output(s);
+                            UI.Output(s);                                                       
                             UI.Menu();
                             break;
                         }
