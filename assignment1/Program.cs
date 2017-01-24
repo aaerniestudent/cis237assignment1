@@ -14,6 +14,7 @@ namespace assignment1
         public static CSVProcessor processor = new CSVProcessor();
         public static Boolean loaded = false;
         public static int choice = 0;
+        public static string pathToCSV = "../../../datafiles/WineList.csv";
 
         static void Main(string[] args)
         {
@@ -27,7 +28,13 @@ namespace assignment1
                     case 1:
                         {
                             //load CSV
-
+                            bool good = processor.ProcessCSV(pathToCSV, collection);
+                            if (good)
+                            {
+                                UI.Output("File read successful");
+                            } else {
+                                UI.Output("File read failure");
+                            }
                             UI.Menu();
                             break;
                         }
@@ -51,15 +58,15 @@ namespace assignment1
                     case 4:
                         {
                             //search by id
-                            UI.Output(collection.SearchByID(UI.searchById()));
+                            string search = UI.searchById();
+                            UI.Output(collection.SearchByID(search));
                             UI.Menu();
                             break;
                         }
                     default: break;
                 }
             }
-            
-            
+
 
         }
     }

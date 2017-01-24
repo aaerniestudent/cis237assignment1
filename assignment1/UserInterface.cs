@@ -12,8 +12,8 @@ namespace assignment1
         {
             Console.WriteLine("1. load CSV");
             Console.WriteLine("2. print entire list");
-            Console.WriteLine("3. search by ID");
-            Console.WriteLine("4. add item");
+            Console.WriteLine("3. add item");
+            Console.WriteLine("4. search by id");
             Console.WriteLine("5. exit");                
         }
 

@@ -9,7 +9,7 @@ namespace assignment1
     class WineItemCollection
     {
 
-        private WineItem[] wineItems;
+        private WineItem[] wineItems = new WineItem[5000];
         private int length = 0;
 
         public int Length
@@ -22,6 +22,19 @@ namespace assignment1
         {
             wineItems[length] = addedItem;
             length++;
+        }
+
+        public void Add(WineItem addedItem, int index)
+        {
+            if (wineItems[index] == null)
+            {
+                wineItems[index] = addedItem;
+                length++;
+            }
+            else
+            {
+                wineItems[index] = addedItem;
+            }            
         }
 
         public String SearchByID(String searchID)
