@@ -46,7 +46,7 @@ namespace assignment1
                     case 2:
                         {
                             //print entire list
-                            if (collection.Length == 0)
+                            if (collection.Length != 0)
                             {
                                 string s = collection.GetPrintString();
                                 UI.Output(s);
@@ -62,7 +62,7 @@ namespace assignment1
                     case 3:
                         {
                             //search by id
-                            if (collection.Length == 0)
+                            if (collection.Length != 0)
                             {
                                 string search = UI.searchById();
                                 UI.Output(collection.SearchByID(search));
