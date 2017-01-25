@@ -25,13 +25,13 @@ namespace assignment1
             set { length = value; }
         }
 
-        //not really necessary or used for the assignment, but could be useful
+        //not really necessary or used for the assignment, but could be useful (not used)
         public WineItem getWineItem(int index)
         {
             return wineItems[index];
         }
 
-        //not really necessary or used for the assignment, but could be useful
+        //not really necessary or used for the assignment, but could be useful (not used)
         public WineItem getLastWineItem()
         {
             return wineItems[length - 1];

@@ -23,7 +23,7 @@ namespace assignment1
             set { idString = value; }
         }
 
-        //default constructor
+        //default constructor (not used)
         public WineItem()
         {
         }

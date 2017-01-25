@@ -8,16 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//MAIN
 namespace assignment1
 {
     class Program
     {
 
+        //initialize all the objects
         public static WineItemCollection collection = new WineItemCollection();
         public static UserInterface UI = new UserInterface();
         public static CSVProcessor processor = new CSVProcessor();
+        //flag to check if the file is loaded successfully. could be used more, but really not.
         public static Boolean loaded = false;
+        //user choice for menu option
         public static int choice = 0;
+        //csv file path from debug folder
         public static string pathToCSV = "../../../datafiles/WineList.csv";
 
         static void Main(string[] args)
