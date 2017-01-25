@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Anthony Aernie
+//CIS237 MW 6:00
+//Jan 25, 2017
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +23,7 @@ namespace assignment1
         static void Main(string[] args)
         {
             UI.Menu();
+            //5 exits the program
             while (choice != 5)
             {                
                 choice = UI.MenuInput();
@@ -40,26 +45,41 @@ namespace assignment1
                         }
                     case 2:
                         {
-                            //print entire list                           
-                            string s = collection.GetPrintString();
-                            UI.Output(s);                                                       
+                            //print entire list
+                            if (collection.Length == 0)
+                            {
+                                string s = collection.GetPrintString();
+                                UI.Output(s);
+                            } else
+                            {
+                                //if there are no items in the collection
+                                UI.Output("There are no items in the collection");
+                            }
                             UI.Menu();
+                            
                             break;
                         }
                     case 3:
                         {
-                            //add item
-                            WineItem addItem = UI.AddItem();
-                            collection.Add(addItem);
-                            UI.Output("Item added");
+                            //search by id
+                            if (collection.Length == 0)
+                            {
+                                string search = UI.searchById();
+                                UI.Output(collection.SearchByID(search));
+                            } else
+                            {
+                                //if there are no items in the collection
+                                UI.Output("There are no items in the collection");
+                            }
                             UI.Menu();
                             break;
                         }
                     case 4:
-                        {
-                            //search by id
-                            string search = UI.searchById();
-                            UI.Output(collection.SearchByID(search));
+                        {                            
+                            //add item
+                            WineItem addItem = UI.AddItem();
+                            collection.Add(addItem);
+                            UI.Output("Item added");
                             UI.Menu();
                             break;
                         }

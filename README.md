@@ -4,7 +4,7 @@
 
 ## Author
 
-
+Anthony Aernie
 
 ## Description
 
@@ -85,4 +85,8 @@ Suggestion/Hints:
 
 ## Outside Resources Used
 
+none
+
 ## Known Problems, Issues, And/Or Errors in the Program
+
+none

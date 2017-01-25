@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Anthony Aernie
+//CIS237 MW 6:00
+//Jan 25, 2017
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +14,8 @@ namespace assignment1
     class CSVProcessor
     {
 
+        //opens the csv, processes it, and closes it
+        //returns true for successful, false for failure
         public bool ProcessCSV(string pathToCSV,WineItemCollection collection)
         {
             StreamReader streamReader = null;
@@ -41,6 +47,7 @@ namespace assignment1
             }
         }
 
+        //processes a single line from the CSV
         public bool ProcessLine(string line, WineItemCollection collection, int index)
         {
             string[] parts = line.Split(',');

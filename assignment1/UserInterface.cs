@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Anthony Aernie
+//CIS237 MW 6:00
+//Jan 25, 2017
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +12,17 @@ namespace assignment1
 {
     class UserInterface
     {
+        //main menu 
         public void Menu()
         {
             Console.WriteLine("1. load CSV");
             Console.WriteLine("2. print entire list");
-            Console.WriteLine("3. add item");
-            Console.WriteLine("4. search by id");
+            Console.WriteLine("3. search by id");
+            Console.WriteLine("4. add item");
             Console.WriteLine("5. exit");                
         }
-
+        
+        //recieves input for the menu
         public int MenuInput()
         {
             string input = Console.ReadLine();  
@@ -42,22 +48,26 @@ namespace assignment1
             return new WineItem(id, description, pack);            
         }
 
+        //display and input for id search
         public string searchById()
         {
             Console.WriteLine("Please input 5 character ID number.");            
             return Console.ReadLine();
         }
 
+        //any outputs go through this
         public void Output(string s)
         {
             Console.WriteLine(s);
         }
 
+        //Clears the screen
         public void Clear()
         {
             Console.Clear();
         }
 
+        //error for menu input
         private void InputError()
         {
             Console.WriteLine("Error: invalid input; please input the number associated with the menu choice you want.");
